@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Database · Changfeng Tao</title>
+<meta name="description" content="Research data built by Changfeng Tao (陶长风), including a letter-level database of inquiry letters from the Shanghai and Shenzhen Stock Exchanges.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="assets/site.css">
+<script src="assets/site.js"></script>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="wrap masthead__inner">
+    <a class="brand" href="index.html">
+      <svg class="brand__mark" viewBox="0 0 64 64" width="22" height="22" aria-hidden="true"><rect width="64" height="64" rx="15"/><text x="32" y="47" text-anchor="middle">t</text></svg>
+      <span class="en">Changfeng Tao</span><span class="zh">陶长风</span>
+    </a>
+    <nav class="nav" aria-label="Main">
+      <a href="index.html"><span class="en">Home</span><span class="zh">首页</span></a>
+      <a href="research.html"><span class="en">Research</span><span class="zh">研究</span></a>
+      <a href="cv.html"><span class="en">CV</span><span class="zh">简历</span></a>
+      <a href="database.html" aria-current="page"><span class="en">Database</span><span class="zh">数据库</span></a>
+    </nav>
+    <div class="tools">
+      <button id="lang-toggle" class="tool" type="button" aria-label="Switch language / 切换语言"><span class="en">中文</span><span class="zh">EN</span></button>
+      <button id="theme-toggle" class="tool" type="button" aria-label="Switch light or dark mode / 切换浅色或深色模式">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/><path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="wrap layout">
+
+  <aside class="sidebar">
+    <img class="sidebar__photo" src="images/avatar.jpg" width="360" height="360" alt="Changfeng Tao">
+    <div>
+      <p class="sidebar__name"><span class="en">Changfeng Tao</span><span class="zh">陶长风</span></p>
+      <p class="sidebar__role"><span class="en">PhD Candidate · Accounting</span><span class="zh">博士生 · 会计学</span></p>
+    </div>
+    <ul class="pills">
+      <li><span class="en">Data Assets</span><span class="zh">数据资产</span></li>
+      <li><span class="en">AI</span><span class="zh">人工智能</span></li>
+      <li><span class="en">Disclosure</span><span class="zh">信息披露</span></li>
+      <li><span class="en">Capital Markets</span><span class="zh">资本市场</span></li>
+    </ul>
+    <ul class="contact">
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.500a2.500 2.500 0 0 1 0 5z"/></svg><span><span class="en">Shanghai, China</span><span class="zh">中国，上海</span></span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2 2 7v2h20V7zM5 11v7h2v-7zm6 0v7h2v-7zm6 0v7h2v-7zM3 20v2h18v-2z"/></svg><span><span class="en">Fudan University</span><span class="zh">复旦大学</span></span></li>
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 8 8-5.500V7l-8 5.500L4 7v.5z"/></svg><a href="mailto:cftao23@m.fudan.edu.cn">cftao23@m.fudan.edu.cn</a></li>
+    </ul>
+  </aside>
+
+  <main class="content">
+    <h1 class="page-title"><span class="en">Database</span><span class="zh">数据库</span></h1>
+    <p class="lede"><span class="en">Data I have built for my research. Public versions will be posted here once they are ready.</span><span class="zh">这里放我在研究中构建的数据，公开版本整理好后会发布在本页。</span></p>
+
+    <article class="data-card" id="inquiry-letters">
+      <div class="data-card__head">
+        <h2 class="data-card__title"><span class="en">Exchange Inquiry Letter Database</span><span class="zh">沪深交易所问询函数据库</span></h2>
+        <span class="badge badge--wip"><span class="en">In preparation</span><span class="zh">整理中</span></span>
+      </div>
+      <p class="data-card__desc"><span class="en">A letter-level dataset of inquiry letters from the Shanghai and Shenzhen Stock Exchanges and the corresponding firm replies, built for my doctoral dissertation.</span><span class="zh">为博士论文自建的函件级数据集，覆盖沪深两市交易所问询函与公司回函。</span></p>
+      <dl class="data-table">
+        <dt><span class="en">Unit of observation</span><span class="zh">观测单位</span></dt>
+        <dd><span class="en">Letter</span><span class="zh">函件</span></dd>
+        <dt><span class="en">Coverage</span><span class="zh">覆盖范围</span></dt>
+        <dd><span class="en">Shanghai and Shenzhen Stock Exchanges; more than 20,000 letters and replies</span><span class="zh">沪深两市，两万余封问询函与回函</span></dd>
+        <dt><span class="en">Text-based measures</span><span class="zh">文本指标</span></dt>
+        <dd><span class="en">Inquiry intensity, inquiry topics, reply stance</span><span class="zh">问询强度、问询主题、回函立场</span></dd>
+        <dt><span class="en">AI-related letters</span><span class="zh">人工智能问询函</span></dt>
+        <dd><span class="en">Identified with a dictionary method</span><span class="zh">以词典法识别</span></dd>
+        <dt><span class="en">Related research</span><span class="zh">相关研究</span></dt>
+        <dd><a href="research.html#dissertation"><span class="en">The Regulatory Effectiveness of AI Disclosure: Evidence from Inquiry Letters</span><span class="zh">人工智能信息披露的监管有效性研究——基于问询函的证据</span></a></dd>
+        <dt><span class="en">Public version</span><span class="zh">公开版本</span></dt>
+        <!-- 数据放上来之后，把下面这一行换成下载链接，例如：
+             <dd><a href="data/inquiry_letters_v1.csv">Download (CSV)</a> · <a href="data/codebook_v1.pdf">Codebook</a></dd>
+             并把上面的 In preparation / 整理中 改成版本号或发布日期。 -->
+        <dd><span class="en">A trimmed version will be posted on this page.</span><span class="zh">删减后的公开版本将发布在本页。</span></dd>
+      </dl>
+    </article>
+  </main>
+
+</div>
+
+<footer class="footer">
+  <div class="wrap footer__inner">
+    <p><span class="en">© 2026 Changfeng Tao · Last updated November 2026</span><span class="zh">© 2026 陶长风 · 最后更新于 2026 年 11 月</span></p>
+  </div>
+</footer>
+
+</body>
+</html>
