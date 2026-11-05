@@ -436,6 +436,7 @@ h1, h2, h3 { text-wrap: balance; }
   line-height: 1.5;
 }
 .paper__authors { color: var(--ink-mid); font-size: .88rem; line-height: 1.5; }
+.paper__authors strong { color: var(--ink); font-weight: 600; }
 .paper__status {
   display: flex;
   flex-wrap: wrap;
