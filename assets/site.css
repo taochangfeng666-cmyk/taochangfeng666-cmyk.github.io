@@ -279,6 +279,10 @@ h1, h2, h3 { text-wrap: balance; }
 }
 .hero__links a { font-weight: 500; }
 .hero__photo { position: sticky; top: 5.5rem; }
+/* The English bio runs longer than the Chinese one, so the photo sits lower to balance it. */
+@media (min-width: 861px) {
+  html:not([data-lang="zh"]) .hero__photo { margin-top: 4.5rem; }
+}
 .hero__photo img {
   width: 100%;
   aspect-ratio: 1;
