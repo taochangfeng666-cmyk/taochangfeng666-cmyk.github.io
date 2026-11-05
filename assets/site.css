@@ -269,7 +269,15 @@ h1, h2, h3 { text-wrap: balance; }
 .hero__bio p:last-child { margin-bottom: 0; }
 .hero__bio .job-market { color: var(--ink); }
 .hero__bio strong { color: var(--ink); font-weight: 600; }
-.hero__cv a { font-weight: 500; }
+.hero__bio a strong { color: inherit; }
+.hero__links {
+  margin: 1rem 0 0;
+  color: var(--ink-soft);
+  font-size: .88rem;
+  line-height: 1.5;
+  text-align: right;
+}
+.hero__links a { font-weight: 500; }
 .hero__photo { position: sticky; top: 5.5rem; }
 .hero__photo img {
   width: 100%;
@@ -329,6 +337,7 @@ h1, h2, h3 { text-wrap: balance; }
   font-size: .82rem;
   line-height: 1.5;
 }
+.entry__meta strong { color: var(--ink); font-weight: 600; }
 .entry__date {
   flex: none;
   margin: 0;
