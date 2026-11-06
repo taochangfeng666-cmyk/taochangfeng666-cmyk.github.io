@@ -66,16 +66,25 @@
         <h2 class="data-card__title"><span class="en">Exchange Comment Letter Database</span><span class="zh">沪深交易所问询函数据库</span></h2>
         <span class="badge badge--wip"><span class="en">In preparation</span><span class="zh">整理中</span></span>
       </div>
-      <p class="data-card__desc"><span class="en">A letter-level dataset of comment letters from the Shanghai and Shenzhen Stock Exchanges and the corresponding firm replies, built for my doctoral dissertation.</span><span class="zh">为博士论文自建的函件级数据集，覆盖沪深两市交易所问询函与公司回函。</span></p>
+      <p class="data-card__desc"><span class="en">A letter-level dataset of the comment letters issued by the Shanghai and Shenzhen Stock Exchanges and the corresponding firm replies, built for my doctoral dissertation. Every letter can be traced back to its source, its original text, and how it was matched.</span><span class="zh">为博士论文自建的函件级数据集，覆盖沪深交易所发出的问询函与公司回函。每封函件都可以追溯到来源、原文与匹配方式。</span></p>
+      <ul class="data-stats">
+        <li><strong>21,061</strong><span class="en">letters</span><span class="zh">封函件</span></li>
+        <li><strong>3,722</strong><span class="en">firms</span><span class="zh">家公司</span></li>
+        <li><strong>133,601</strong><span class="en">questions</span><span class="zh">个问题</span></li>
+        <li><strong>181</strong><span class="en">letter-level measures</span><span class="zh">个函件级指标</span></li>
+        <li><strong>94.8%</strong><span class="en">of letters with replies</span><span class="zh">函件有回复</span></li>
+      </ul>
       <dl class="data-table">
         <dt><span class="en">Unit of observation</span><span class="zh">观测单位</span></dt>
-        <dd><span class="en">Letter</span><span class="zh">函件</span></dd>
+        <dd><span class="en">Letter, with question-level and firm-year layers</span><span class="zh">函件，另有问题级和公司-年两层</span></dd>
+        <dt><span class="en">Sample period</span><span class="zh">样本期</span></dt>
+        <dd><span class="en">January 2015 to December 2024</span><span class="zh">2015 年 1 月至 2024 年 12 月</span></dd>
         <dt><span class="en">Coverage</span><span class="zh">覆盖范围</span></dt>
-        <dd><span class="en">Shanghai and Shenzhen Stock Exchanges; more than 20,000 letters and replies</span><span class="zh">沪深两市，两万余封问询函与回函</span></dd>
+        <dd><span class="en">Inquiry letters, letters of concern, and work letters issued by the Shanghai and Shenzhen Stock Exchanges to firms listed on the Main Board, the STAR Market, and ChiNext</span><span class="zh">沪深交易所发出的问询函、关注函与工作函，覆盖沪深主板、科创板、创业板</span></dd>
+        <dt><span class="en">Sources</span><span class="zh">数据来源</span></dt>
+        <dd><span class="en">The CNRDS database, the exchanges' websites, and listed-company announcements on CNINFO</span><span class="zh">CNRDS 数据库、交易所官网、巨潮资讯网上市公司公告</span></dd>
         <dt><span class="en">Text-based measures</span><span class="zh">文本指标</span></dt>
-        <dd><span class="en">Inquiry intensity, inquiry topics, reply stance</span><span class="zh">问询强度、问询主题、回函立场</span></dd>
-        <dt><span class="en">AI-related letters</span><span class="zh">人工智能问询函</span></dt>
-        <dd><span class="en">Identified with a dictionary method</span><span class="zh">以词典法识别</span></dd>
+        <dd><span class="en">Inquiry intensity, inquiry topics, textual features, reply characteristics, and reply stance</span><span class="zh">问询强度、问询主题、文本特征、回函特征与回函立场</span></dd>
         <dt><span class="en">Related research</span><span class="zh">相关研究</span></dt>
         <dd><a href="research.html#dissertation"><span class="en">The Regulatory Effects of AI-Related Comment Letters</span><span class="zh">人工智能主题问询函的监管效应研究</span></a></dd>
         <dt><span class="en">Public version</span><span class="zh">公开版本</span></dt>
@@ -85,6 +94,24 @@
         <dd><span class="en">A de-identified public version will be posted on this page.</span><span class="zh">脱敏后的公开版本将发布在本页。</span></dd>
       </dl>
     </article>
+
+    <section class="block">
+      <h2 class="section-head"><span class="en">Technical Challenges</span><span class="zh">技术瓶颈</span></h2>
+      <p class="section-text en">Building the database meant solving several problems: letters missing from the CNRDS database, long texts truncated by Excel, documents not issued by the exchanges, single letters spread across several announcements, and unstructured text.</p>
+      <p class="section-text zh">解决了 CNRDS 数据库漏收部分函件、长文本被 Excel 截断、主体混杂、一函多文、非结构化等问题。</p>
+      <figure class="data-figure">
+        <a href="images/database-pipeline.png"><img src="images/database-pipeline.png" width="1920" height="1080" loading="lazy" alt="Flow chart in Chinese: three data sources (CNRDS, the exchanges' websites, and CNINFO announcements) feed a cleaning and merging step that addresses four technical challenges and produces a letter-level master table, question-level and letter-level measures, and a firm-year panel."></a>
+        <figcaption><span class="en">Figure 1. How the database is built (in Chinese).</span><span class="zh">图 1　问询函数据底座的构建流程</span></figcaption>
+      </figure>
+    </section>
+
+    <section class="block">
+      <h2 class="section-head"><span class="en">Outputs</span><span class="zh">产出</span></h2>
+      <figure class="data-figure">
+        <a href="images/database-output.png"><img src="images/database-output.png" width="1920" height="1080" loading="lazy" alt="Stacked bar chart in Chinese of letters per year from 2015 to 2024 by source (CNRDS, exchange websites, CNINFO reconstruction), with 21,061 letters, 3,722 firms, and 181 letter-level measures built on 133,601 questions."></a>
+        <figcaption><span class="en">Figure 2. Letters by year and source, and key outputs, January 2015 to December 2024 (in Chinese).</span><span class="zh">图 2　各年函件数（按来源）与主要产出，2015 年 1 月至 2024 年 12 月</span></figcaption>
+      </figure>
+    </section>
   </main>
 
 </div>
